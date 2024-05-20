@@ -60,7 +60,7 @@
 
 // ====================================== scroll reveal ===================================//
 ScrollReveal ({
-    distance: '800px',
+    distance: '600px',
     duration: 2000,
     delay: 200,
     reset: true,
