@@ -255,10 +255,18 @@ span{
 
   }
   
- .div {
+  .item {
+    display: flex;
+    align-items: center;  /* Centers items vertically */
+    justify-content: space-between;  /* Places items at the far ends */
+    width: 700px;
+}
 
-    display: block;
- }
+.item-4,.item-5,.item-6,.item-7 {
+    margin-bottom: 25px;
+}
+
+
 
   .skills-content{
     font-size: 24px;
@@ -321,15 +329,20 @@ span{
 }
  .portfolio h1 {
     font-size: 48px;
+    text-align: center;
  }
 
  .portfolio h2 {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 16px;
+ }
+ .portfolio h3{
+ font-size:24px;
+ margin-bottom: 16px;
  }
 
  .portfolio p {
-    font-size : 16px;
+    font-size : 20px;
     margin-bottom: 16px;
 
  }

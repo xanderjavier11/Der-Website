@@ -72,5 +72,12 @@ ScrollReveal().reveal ('.home .home-img , .heading ', {origin: 'right'});
 ScrollReveal().reveal ('.skills-container .skills-box', {origin: 'bottom', interval: 100 });
 ScrollReveal().reveal ('.home .home-text, .download-cv, .social-media', {origin: 'left'});
 
+ScrollReveal().reveal ('.about-card:nth-child(1)', {origin: 'left'});
+ScrollReveal().reveal ('.about-card:nth-child(2)', {origin: 'right'});
+
+ScrollReveal().reveal ('.about-header, .portfolio-header, .portfolio-content', {distance: '0px', });
+
+
+
 
  
