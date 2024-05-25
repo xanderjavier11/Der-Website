@@ -59,6 +59,7 @@
 };
 
 // ====================================== scroll reveal ===================================//
+if (window.matchMedia("(min-width: 769px)").matches) {
 ScrollReveal ({
     distance: '600px',
     duration: 2000,
@@ -76,8 +77,7 @@ ScrollReveal().reveal ('.about-card:nth-child(1)', {origin: 'left'});
 ScrollReveal().reveal ('.about-card:nth-child(2)', {origin: 'right'});
 
 ScrollReveal().reveal ('.about-header, .portfolio-header, .portfolio-content', {distance: '0px', });
-
-
+}
 
 
  

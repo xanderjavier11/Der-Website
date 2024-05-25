@@ -88,7 +88,7 @@ span{
 }
 
 
-/* home design */
+/* --------------------------------------------------------home design ---------------------------------------------------*/
 
 .home {
     display: flex;
@@ -198,9 +198,9 @@ span{
 
 }
 
-/* Home Design */
+/* --------------------------------------------------------Home Design ----------------------------------------------------------------*/
 
-/* About Design */
+/*------------------------------------------------------- About Design ----------------------------------------------------------------*/
 
 .about {
     background: var(--snd-bg-color);
@@ -262,21 +262,27 @@ span{
     width: 700px;
 }
 
-.item-4,.item-5,.item-6,.item-7 {
+.item-4,.item-5,.item-6,.item-7, .item-8 {
     margin-bottom: 25px;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.about-card:nth-child(1) {
+    margin-bottom: 250px; /* Adjust the margin value as needed */
+}
+
+.about-card:nth-child(2) h3{
+    margin-bottom: 36px;
 }
 
 
-
-  .skills-content{
-    font-size: 24px;
-    text-decoration: underline;
-  }
-/* About Design */
+/*------------------------------------------------------- About Design ----------------------------------------------------------------*/
 
 
 
-/* skills  */
+/*--------------------------------------------------------- Skills ----------------------------------------------------------------- */
 .skills h2{
    margin-bottom: 5rem;
 
@@ -314,16 +320,62 @@ span{
 
 .skills-box h3 {
     font-size: 2.6rem;
+    margin-bottom: 30px;
 
 }
 
-.skills-box p {
-    font-size: 1.6rem;
-    margin: 1rem 0 3rem;
-}
-/* skills */
 
-/* Portfolio */
+
+button {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: default;
+  margin-bottom: 10px;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #262B40;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #262B40;
+  transition: 0.5s;
+}
+
+button:hover::before, button:hover::after {
+  transform: scale(0)
+}
+
+button:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
+/*--------------------------------------------------------- Skills ----------------------------------------------------------------- */
+
+/* ------------------------------------------------------Portfolio ------------------------------------------------------------------*/
 .portfolio{
     background-color: var(--snd-bg-color);
 }
@@ -354,9 +406,9 @@ span{
     
 
  }
-/* Portfolio */
+/* ------------------------------------------------------Portfolio ------------------------------------------------------------------*/
 
-/* Contact Design */
+/* -------------------------------------------------------Contact Design -----------------------------------------------------------*/
 
 .contact {
 
@@ -373,9 +425,10 @@ span{
 
 }
 
+/* -------------------------------------------------------Contact Design -----------------------------------------------------------*/
 
 
-/* Footer Design  */
+/* -------------------------------------------------------- Footer Design  ---------------------------------------------------------*/
 .footer {
 display: flex;
 justify-content: space-between;
@@ -465,7 +518,7 @@ transition: .5s ease;
         display: block;
     }
 
-
+/* home content */
     .home {
         flex-direction: column;
     }
@@ -493,39 +546,68 @@ transition: .5s ease;
         width: 300px;
         margin-top: 4rem;
     }
+     /* home content */
 
     /* about content */
-    .about {
-       flex-direction: column ;
-       display: flex;
-       align-items: center;
-       text-align:center ;
-        
-    }
-   
-    .about-img img {
-        width: 90%;
-        margin-top: 2rem;
-        max-width: 300px;
-    }
+    .about-container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    
+      .about-card {
+        width: 100%;
+        margin-bottom: 30px; /* Adjust spacing between cards */
+      }
+    
+      .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: auto;
+      }
+    
+      .item-4,
+      .item-5,
+      .item-6,
+      .item-7,
+      .item-8 {
+        margin-bottom: 15px; /* Adjust spacing between items */
+      }
+    
+      .about-card:nth-child(1) {
+        margin-bottom: 30px; /* Adjust margin for the first card */
+      }
+    
+      .about-card:nth-child(2) h3 {
+        margin-bottom: 20px; /* Adjust margin for the second card heading */
+      }
+    
+      .about-card {
+        padding: 30px; /* Adjust padding for smaller screens */
+      }
 
-    .about-content {
-        margin-top: 2rem;
-        width:90%;
-        max-width: 600px;
-        text-align: left;
-        margin: 0 auto;
-    }
+     /* about content */
 
-    .about-content p {
-        font-size: 1.8rem;
-       
-    }
-    .about-content h1{
-        font-size: 4rem;
 
-    }
-    .about-content h2{
-        font-size: 2.5rem;
-    }
+
+/* skills content */
+.skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-container .skills-box {
+    flex: 1 1 100%;
+    margin-bottom: 20px; /* Adjust spacing between skills boxes */
+  }
+
+  .skills-box {
+    padding: 24px 16px 40px; /* Adjust padding for smaller screens */
+  }
+
+  button {
+    width: 100%; /* Make buttons full width */
+    max-width: 200px; /* Limit max width of buttons */
+  }
+  /*Skills Content */
 }
