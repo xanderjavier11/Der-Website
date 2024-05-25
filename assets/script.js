@@ -62,7 +62,7 @@
 if (window.matchMedia("(min-width: 769px)").matches) {
 ScrollReveal ({
     distance: '600px',
-    duration: 2000,
+    duration: 2000, 
     delay: 200,
     reset: true,
 });
