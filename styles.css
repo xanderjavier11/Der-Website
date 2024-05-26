@@ -295,17 +295,19 @@ span{
     flex-wrap: wrap;
     gap: 2rem;
     margin-top: 10px;
-
 }
 
 .skills-container .skills-box {
-    flex: 1 1 30rem;
+    width: 500px; /* Fixed width */
+    height: 360px; /* Fixed height (adjust as needed) */
     background: var(--snd-bg-color);
-    padding: 48px 32px 64px;
+    padding: 48px 32px;
     border-radius: 32px;
     text-align: center;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
+    max-width: 100%;
+
 }
 
 .skills-container .skills-box:hover {
@@ -638,7 +640,8 @@ transition: .5s ease;
 
   .skills-container .skills-box {
     flex: 1 1 100%;
-    margin-bottom: 20px; /* Adjust spacing between skills boxes */
+    margin-bottom: 20px;
+    width: 50%; /* Adjust spacing between skills boxes */
   }
 
   .skills-box {
