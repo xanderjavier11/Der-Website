@@ -641,7 +641,7 @@ transition: .5s ease;
   .skills-container .skills-box {
     flex: 1 1 100%;
     margin-bottom: 20px;
-    width: 50%; /* Adjust spacing between skills boxes */
+    width: 75%; /* Adjust spacing between skills boxes */
   }
 
   .skills-box {
