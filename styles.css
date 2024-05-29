@@ -64,9 +64,9 @@ z-index: 100;
 }
 
 .navbar a {
-    font-size: 1.5rem;
+    font-size: 16px;
     color: var(--text-color);
-    margin-left: 4rem;
+    margin-left: 64px;
     font-weight: 700;
 
 }
@@ -174,15 +174,16 @@ span{
 
 .btn {
     display: inline-block;
-    padding: 1rem 2.8rem;
+    padding: 16px 20px;
     background: var(--main-color);
-    border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
-    font-size: 1.6rem;
+    border-radius: 20px;
+    box-shadow: 0 0 12px #f8f8f8;
+    font-size: 16px;
     color: var(--bg-color);
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
+    
 
 }
 
@@ -387,8 +388,9 @@ button:hover {
     background-color: var(--snd-bg-color);
 }
  .portfolio h1 {
-    font-size: 48px;
+    font-size: 36px;
     text-align: center;
+    margin-bottom: 36px;
  }
 
  .portfolio h2 {
@@ -414,6 +416,175 @@ button:hover {
 
  }
 
+ .portfolio strong{
+    color: var(--main-color);
+ }
+
+ .company-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+    margin-top: 20px;
+    padding-right: 200px;
+    padding-left: 200px;
+    margin-bottom: 70px;
+   
+   
+ }
+
+ 
+
+ 
+
+ .company-logo img{
+border-radius: 20px;
+margin-right: 50px;
+box-shadow: 0px 0px 12px #f8f8f8
+
+ }
+
+
+ .position-container{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   
+   padding-right:  200px;
+   padding-left: 200px;
+   margin-bottom: 70px;
+ }
+
+ .position-logo img {
+    height: 400px;
+    width: 500px;
+    border-radius: 20px;
+    float: right;
+    box-shadow: 0px 0px 12px #f8f8f8;
+ }
+
+
+/*----------------Accomplishment Card------------------ */
+ .accomplishment-card{
+
+    margin-bottom: 150px;
+
+   
+ }
+
+ .accomplishment-card h2 {
+    text-align: center;
+    margin-bottom: 10px;
+ }
+/* -------------Accomplishment Card---------------------- */
+
+ .btn-container{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
+ }
+
+.btn-container2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*--------------------------------------- Button Card for Documents--------------------------------*/
+
+.btn-card {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  position: relative; /* Needed for the absolute positioning of ::before */
+  overflow: hidden; /* To make sure the ::before content doesn't overflow */
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px  #f8f8f8;
+  margin-top: 25px;
+  
+  
+}
+
+.btn-card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  opacity: 50%;
+  filter: blur(1px);
+  z-index: 0; /* To ensure it stays behind the content */
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.week-1::before,
+.week-3::before,
+.week-5::before,
+.week-7::before,
+.week-9::before,
+.week-11::before
+{
+
+  background-image: url("/assets/img/week1-2.jpg");
+
+}
+
+.coc::before
+{
+  background-image: url("/assets/img/coc.jpg")
+}
+
+.moa::before
+{
+  background-image: url("/assets/img/moa.jpg");
+}
+
+.waiver::before {
+  background-image: url("/assets/img/waiver.jpg")
+}
+
+.acceptance::before{
+  background-image: url("/assets/img/acceptance.jpg");
+}
+
+.cv::before {
+  background-image: url("/assets/img/cv.jpg")
+}
+
+
+.btn-card:hover {
+  box-shadow: none;
+}
+
+.btn-card p {
+  position: relative; /* To ensure it stays above the ::before element */
+  z-index: 1; /* To ensure it stays above the ::before element */
+ top: 50%;
+ bottom: 50%; /* Optional: reset margin if needed */
+   /* Optional: adjust padding as needed */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*--------------------------------------- Button Card for Documents--------------------------------*/
+
+
+/*---------------------------Ojt Card----------------------- */
+
+ .ojt-card{
+   margin-bottom: 150px;
+ }
+
+ .ojt-card h2{
+  text-align: center;
+ }
+
+
+
+/*---------------------- Ojt Documents Styling -----------------------*/
+
  .essay-card {
     border-radius: 10px;
     filter: drop-shadow(0 5px 10px 0 #ffffff);
@@ -426,8 +597,10 @@ button:hover {
     overflow: hidden;
     transition: 0.6s ease-in;
     box-shadow: 0px 0px 16px  #f8f8f8;
+   
   }
 
+ 
   
   .essay-card::before {
     content: "";

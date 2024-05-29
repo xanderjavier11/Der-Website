@@ -1,18 +1,4 @@
 
-    // document.addEventListener("DOMContentLoaded", function() {
-    //     const navLinks = document.querySelectorAll('.nav-link');
-
-    //     navLinks.forEach(link => {
-    //         link.addEventListener('click', function(event) {
-    //             navLinks.forEach(link => {
-    //                 link.classList.remove('active');
-    //             });
-    //             this.classList.add('active');
-    //         });
-    //     });
-    // });
-
-
     ////////////////////////// toggle Icon Bar ///////////////////////////////////
 
     let menuIcon = document.querySelector('#menu-icon');
@@ -70,14 +56,24 @@ ScrollReveal ({
 ScrollReveal().reveal (' .home-header', {origin: 'top', });
 ScrollReveal().reveal ('.home .home-img , .heading ', {origin: 'right'});
 
-ScrollReveal().reveal ('.skills-container .skills-box', {origin: 'bottom', interval: 100 });
+ScrollReveal().reveal ('.skills-container .skills-box', {origin: 'bottom', interval: 200, distance:'200px' });
 ScrollReveal().reveal ('.home .home-text, .download-cv, .social-media', {origin: 'left'});
 
-ScrollReveal().reveal ('.about-card:nth-child(1)', {origin: 'left'});
-ScrollReveal().reveal ('.about-card:nth-child(2)', {origin: 'right'});
+ScrollReveal().reveal ('.about-card:nth-child(1), .company-logo, .position-content', {origin: 'left'});
+ScrollReveal().reveal ('.about-card:nth-child(2), .company-content, .position-logo', {origin: 'right'});
 
 ScrollReveal().reveal ('.about-header, .portfolio-header, .portfolio-content', {distance: '0px', });
-}
+ScrollReveal().reveal ('.btn-card', {distance:'100px', origin: 'bottom', interval: 200})
+ScrollReveal().reveal ('.accomplishment-card h2, .ojt-card h2', {distance:'100px', origin: 'top'  })
+};
 
 
+// ======================================= typing ==========================================
+var typed = new Typed(".auto-type", {
+    strings: ["Information Technology Student", ],
+    startDelay: 1000,
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true
+  })
  
