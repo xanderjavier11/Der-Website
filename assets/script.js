@@ -44,6 +44,25 @@
         navbar.classList.remove('active');
 };
 
+
+// =======================================about me ======================================== //
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(event, tabname) {
+    for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+
+    for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+// =======================================about me ======================================== //
+
 // ====================================== scroll reveal ===================================//
 if (window.matchMedia("(min-width: 769px)").matches) {
 ScrollReveal ({
@@ -59,10 +78,10 @@ ScrollReveal().reveal ('.home .home-img , .heading ', {origin: 'right'});
 ScrollReveal().reveal ('.skills-container .skills-box', {origin: 'bottom', interval: 200, distance:'200px' });
 ScrollReveal().reveal ('.home .home-text, .download-cv, .social-media', {origin: 'left'});
 
-ScrollReveal().reveal ('.about-card:nth-child(1), .company-logo, .position-content', {origin: 'left'});
-ScrollReveal().reveal ('.about-card:nth-child(2), .company-content, .position-logo', {origin: 'right'});
+ScrollReveal().reveal (' .company-logo, .position-content', {origin: 'left'});
+ScrollReveal().reveal (' .company-content, .position-logo', {origin: 'right'});
 
-ScrollReveal().reveal ('.about-header, .portfolio-header, .portfolio-content', {distance: '0px', });
+ScrollReveal().reveal (' .portfolio-header, .portfolio-content', {distance: '0px', });
 ScrollReveal().reveal ('.btn-card', {distance:'100px', origin: 'bottom', interval: 200})
 ScrollReveal().reveal ('.accomplishment-card h2, .ojt-card h2', {distance:'100px', origin: 'top'  })
 };

@@ -68,99 +68,66 @@
 
 <section class="about" id="about";>
 
-    <h1 class="about-header">About <span>Me</span></h1>
-   <div class="about-content"> 
+  
+  
         <div class="about-container">
-
-            <div class="about-card">
-                <h3>Academic background</h3>  
-
-                    <div class="item item-1">
-                        <div>
-                <h4>College</h4>
-                <h5>BS Information Technology </h5>
-                <p>De La Salle Lipa</p>
-            </div>
-                <div class="btn new-item">2020-2024</div>
-                    
-                    </div> 
-                    
-                    <br> <br>
-
-                    <div class="item item-2">
-                        <div >
-                    <h4>Senior High School</h4>
-                    <h5>Science Technology Engineering <br>
-                        and Mathematics [STEM]</h5>
-                        <p>De La Salle Lipa</p>
-                            </div>
-                            <div class="btn new-item">2018-2020</div>
-                    </div>
-                    
-                    <br><br>
-
-                    <div class="item item-3">
-                        <div>
-                        <h4> Junior High School</h4>
-                        <p> De La Salle Lipa</p>
-                    </div>
-                    <div class="btn new-item">2014-2018</div>
-                    </div>
-            </div>  
-
-            <div class="about-card">
-                <h3>Certifications</h3>   
-                <div>
-                        <div class="item item-4">
-                            <div >
-                     <h4>SAP Certified Application Associate
-                        <br/> SAP Business One</h4>
-                        <p>Fit Academy</p>
-                    </div>
-                  
-
-                             </div>
-                             <div class="item item-5">
-                                <div>
-                        <h4>IT Essentials: PC Hardware and Software</h4>
-                        <p>Cisco Networking Academy</p>
-                    </div>
-                   
-                    </div>
-
-                    <div class="item item-6">
-                        <div>
-                        <h4>CCNAv7: EnterpriseNetworking, Security, <br>and Automation </h4>
-                            <p>Cisco Networking Academy</p>
-                        </div>
-
-                           
-                            </div>
-
-                            <div class="item item-7">
-                                <div>
-                            <h4>CCNAv7: Switching, Routing, and Wireless <br> Essentials Cisco Networking Acad</h4>
-                            <p>Cisco Networking Academy</p>
-                        </div>
-                            
-                            </div>
-                            
-                            <div class="item item-8">
-                                <div>
-                            <h4>CCNAv7: Introduction to Networks</h4>
-                            <p>Cisco Networking Academy</p>
-                        </div>
-                            
-                            </div>
+            <div class="about-img"><img src="assets/img/image.JPG"> </div>
+            <div class="about-contents"> 
+                <div class="about-header"> <h1>About Me</h1> </div>
+                <div class="about-subheader"><h2> I am an IT student From De La Salle Lipa</h2> </div>
+                <div class="about-card"> 
+                    <p> As an Information Technology student, I am a hardworking person that is committed to learn
+                        and gain experiences that I can use to excel in any responsibilities given
+                        to me. My commitment to continuous learning is demonstrated by my
+                        pursuit of both knowledge and experiences in the field. I am eager to
+                        contribute my skills and enthusiasm to a team.</p> 
                 </div>
+                <div class="about-tabs">
+                    <p class="tab-links active-link" onclick="opentab(event, 'education')">Education</p>
+                    <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab(event, 'certifications')">Certifications</p>
+                </div>
+
+                                <!-- Education -->
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                            <li><span>College</span> <br>De La Salle Lipa 2020-2024</li>
+                            <li><span>Senior High School</span> <br>De La Salle Lipa 2018-2020</li>
+                            <li><span>Junior High School</span> <br>De La Salle Lipa 2014-2018</li>
+                    </ul>
+
+                </div>
+                                    <!-- Education -->
+
+
+                            <!-- Experience -->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                            <li><span>Front End Developer Intern</span> <br>Pixel8 Web Solutions & Consultancy Inc.</li>
+                          
+                    </ul>
+
+                </div>
+                        <!-- Experience -->
+
+                            <!-- Certifications -->
+                <div class="tab-contents" id="certifications">
+                    <ul>
+                            <li><span>IT Essentials: PC
+                                Hardware and Software</span> <br>Cisco Networking Academy</li>
+                            <li><span>CCNAv7: Enterprise Networking, Security, and  Automation</span> <br>Cisco Networking Academy</li>
+                            <li><span>CCNAv7: Switching, Routing, and Wireless Essentials</span> <br>Cisco Networking Academy</li>
+                            <li><span>CCNAv7: Introduction to Networks</span> <br>Cisco Networking Academy </li>
+                            <li><span>SAP CERTIFIED APPLICATION ASSOCIATE - SAP BUSINESS ONE</span> <br>FIT Academy</li>
+
+                    </ul>
+
+                </div>
+                        <!-- Certifications --> 
             </div>
-
-        </div>
-
-        
     </div>
 
-   </div>
+  
 </section>
 <!-- About section design -->  
 
@@ -199,18 +166,29 @@
                 <h3>Operating System</h3>
                 <button><a>Windows</a></button>
                 <button><a>MAC</a></button>
+                <button><a>Linux</a></button>
                 <p></p>
                 
             </div>
 
             <div class="skills-box">
-                <i class="fa-solid fa-gear"></i>
-                <h3>Operating System</h3>
-                <button><a>Windows</a></button>
-                <button><a>MAC</a></button>
+                <i class="fa-solid fa-database"></i>
+                <h3>Database Management</h3>
+                <button><a>MySql</a></button>
                 <p></p>
                 
             </div>
+
+            <div class="skills-box">
+                <i class="fa-solid fa-file-lines"></i>
+                <h3>Documentation</h3>
+                <button><a>Microsoft Office</a></button>
+                <button><a>Google Work Space</a></button>
+                <p></p>
+                
+            </div>
+
+
         
         </div> 
         
@@ -275,7 +253,7 @@
                  </div>
         </div>
 
-        <div class="ojt-card">
+        <div class="ojt-container">
 
             <h2><span>Ojt</span> Documents</h2>
 
@@ -294,15 +272,48 @@
 
             <br>
            
-            <h2>Essay</h2>
-            <div class="essay-card">
-            <p>My OJT experience at <strong>Pixel8 Web Solutions & Consultancy Inc.</strong> began with many challenges since I was new and unfamiliar with the framework we were using. 
-                However, after completing the onboarding tasks assigned to us, I gained a lot of knowledge. This OJT taught me the importance of continuous learning and dedication, 
-                as I often had to study and stay up late to learn the framework so I could accomplish my tasks. The supervisors and teammates were very helpful, aiding my understanding 
-                of the framework. Although this OJT was challenging, it became enjoyable once I learned the necessary skills needed for the job.
-            </p>
-        </div>
-       
+            <!-- <div class="essay-container">
+            <h2>Ojt Experience</h2>
+                         <div class="essay-card">
+                        <p>My OJT experience at <strong>Pixel8 Web Solutions & Consultancy Inc.</strong> began with many challenges since I was new and unfamiliar with the framework we were using. 
+                        However, after completing the onboarding tasks assigned to us, I gained a lot of knowledge. This OJT taught me the importance of continuous learning and dedication, 
+                        as I often had to study and stay up late to learn the framework so I could accomplish my tasks. The supervisors and teammates were very helpful, aiding my understanding 
+                        of the framework. Although this OJT was challenging, it became enjoyable once I learned the necessary skills needed for the job.
+                            </p>
+                                        </div>
+                     </div> -->
+                
+                     <div class="ojt-cardd">
+                        <h2>OJT Experience</h2>
+                        <div class="ojt-section">
+                            
+                            <p>My OJT experience at <strong>Pixel8 Web Solutions & Consultancy Inc.</strong> began with many challenges since I was new and unfamiliar with the framework we were using. 
+                                However, after completing the onboarding tasks assigned to us, I gained a lot of knowledge. This OJT taught me the importance of continuous learning and dedication, 
+                                as I often had to study and stay up late to learn the framework so I could accomplish my tasks. The supervisors and teammates were very helpful, aiding my understanding 
+                                of the framework. Although this OJT was challenging, it became enjoyable once I learned the necessary skills needed for the job.</p>
+                        </div>
+                       
+                        <div class="ojt-section">
+                            <h3>Skills Learned</h3>
+
+                            <div class="learn-container">
+                                     <div class="learn-img">
+                                <img src="assets/img/githublogo.jpg" alt="githublogo" >
+                               
+                                <img src="assets/img/scsslogo.png" alt="scsslogo">
+                                  
+                                <img src="assets/img/nodejslogo.png" alt="nodejslogo">
+
+                                <img src="assets/img/vuelogo.jpg" alt="vuejslogo">
+
+                                <img src="assets/img/quasarlogo.png" alt="quasarlogo">
+
+                                     </div>
+                            </div>
+                            
+                        </div>
+                     
+
  </div>
 
 </section>

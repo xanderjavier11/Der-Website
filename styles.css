@@ -208,79 +208,104 @@ span{
     background: var(--snd-bg-color);
 }
 
-.about h1 {
-    font-size: 48px;
-    text-align: center;
-    
+
+ .about-container{
+  display: flex;
+ 
+ 
+  padding: 80px;
+
+ }
+
+ .about-img img{
+  width: 400px;
+  height: 600px;
+  border-radius: 360px ;
+  margin-left: 80px;
+  
  }
 
 
-.about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 32px;
-    margin-top: 30px;
-    
-  }
+ .about-contents {
+  padding-right: 80px;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-left: 20px;
+     }
 
-  .about-container .about-card{
-    
-    background: var(--bg-color);
-    padding: 24px 32px 24px;
-    border-radius: 64px;
-    box-shadow: 0px 0px 12px #f8f8f8;
+
+ .about-header{
+  font-size: 36px;
+ }
+
+
+
+ .about-subheader{
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: var(--main-color);
+ }
+ 
+ 
+
+ .about-card {
+  font-size: 20px;
+  margin-bottom: 10px;
+ }
+
+
+ .about-tabs {
+  display: flex;
+  margin: 20px 0 40px;
+ }
+
+ .tab-links {
+  margin-right: 50px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor:pointer;
+  position: relative;
+ }
+
+ .tab-links::after {
+  content: '';
+  width: 0;
+  height: 4px;
+  background: var(--main-color);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+ }
+
+ .tab-links.active-link::after {
+  width: 40%;
+ }
+
+ .tab-contents{
+  font-size: 18px;
+  margin-left: 30px;
+  display: none;
   
-    
-  }
+ }
 
-  .about-card h3 {
-    font-size: 28px;
-    text-decoration: underline;
-    text-align: center;
-    margin-bottom: 16px;
-    font-weight: 900;
+ .tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
 
-  }
-  .about-card h4 {
-    font-size: 24px;
-    margin-bottom: 8px;
-    font-weight: 700 ;
-  }
-  .about-card h5 {
-    font-size: 18px;
-    margin-bottom: 8px;
-    font-weight: 700 ;
-  }
+ }
 
-  .about-card p{
-    font-size: 16px;
-    margin-bottom: 16px;;
+ .tab-contents ul li span{
+  font-size: 20px;
+  font-weight: 700;
 
-  }
-  
-  .item {
-    display: flex;
-    align-items: center;  /* Centers items vertically */
-    justify-content: space-between;  /* Places items at the far ends */
-    width: 650px;
-}
+ }
 
-.item-4,.item-5,.item-6,.item-7, .item-8 {
-    margin-bottom: 25px;
-    text-align: center;
-    justify-content: center;
-    
-}
+ .tab-contents.active-tab {
+  display: block;
+ }
 
-.about-card:nth-child(1) {
-    margin-bottom: 250px; /* Adjust the margin value as needed */
-}
 
-.about-card:nth-child(2) h3{
-    margin-bottom: 36px;
-}
 
 
 /*------------------------------------------------------- About Design ----------------------------------------------------------------*/
@@ -483,9 +508,19 @@ box-shadow: 0px 0px 12px #f8f8f8
   margin-right: 40px;
  }
 
-.btn-container2 {
+
+.btn-container2:nth-child(2) {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+ 
+
+}
+
+.btn-container2:nth-child(3){
+  display: flex;
+column-count: 2;
+column-gap: 140px;
+justify-content: center;
 }
 
 /*--------------------------------------- Button Card for Documents--------------------------------*/
@@ -493,7 +528,7 @@ box-shadow: 0px 0px 12px #f8f8f8
 .btn-card {
   display: inline-block;
   width: 400px;
-  height: 400px;
+  height: 500px;
   position: relative; /* Needed for the absolute positioning of ::before */
   overflow: hidden; /* To make sure the ::before content doesn't overflow */
   border-radius: 20px;
@@ -573,19 +608,31 @@ box-shadow: 0px 0px 12px #f8f8f8
 
 /*---------------------------Ojt Card----------------------- */
 
- .ojt-card{
+ .ojt-container{
    margin-bottom: 150px;
  }
 
- .ojt-card h2{
+ .ojt-container h2{
   text-align: center;
  }
 
-
+ 
 
 /*---------------------- Ojt Documents Styling -----------------------*/
 
- .essay-card {
+ /* -----------------------------------------Essay Styling--------------------------------- */
+
+ .essay-container h2{
+  text-align: center;
+ }
+
+ .essay-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* To center the h2 text horizontally */
+
+  .essay-card {
     border-radius: 10px;
     filter: drop-shadow(0 5px 10px 0 #ffffff);
     width: 1200px;
@@ -596,37 +643,79 @@ box-shadow: 0px 0px 12px #f8f8f8
     z-index: 0;
     overflow: hidden;
     transition: 0.6s ease-in;
-    box-shadow: 0px 0px 16px  #f8f8f8;
+    box-shadow: 0px 0px 16px  #f8f8f8;  
+  }
+}
+ /* -----------------------------------------Essay Styling--------------------------------- */
+
+  /* -----------------------------------------Essay Styling--------------------------------- */
+
+
+
+  .ojt-cardd {
+    width: 1600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    box-shadow: 0 0 8px #f8f8f8;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+  .ojt-cardd h2 {
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .ojt-section {
+    margin-bottom: 24px;
    
+  }
+  
+  .ojt-section h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+
+  }
+  
+  .ojt-section p {
+    margin: 0;
+    font-size: 20px;
+    color: white;
   }
 
  
   
-  .essay-card::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: -15px;
-    right: -15px;
-    background: var(--main-color);
-    height:220px;
-    width: 25px;
-    border-radius: 32px;
-    transform: scale(0);
-    transform-origin: 50% 50%;
-    transition: transform 0.25s ease-out;
-  }
+.learn-container{
+  text-align: center;
+ 
+}
+
+.learn-img img{
+  border-radius: 100%;
+  box-shadow: 0px 0px 8px #f8f8f8;
+  width: 80px; 
+  height: 80px;
+  margin-bottom: 24px;
+  margin-right: 24px;
+
+}
+
   
-  .essay-card:hover::before{
-      transition-delay:0.2s ;
+
   
-    transform: scale(100);
-  }
+ 
   
-  .essay-card:hover{
-      color: #ffffff;
-  
-  }
+
+
+  /* -----------------------------------------Essay Styling--------------------------------- */
+
 /* ------------------------------------------------------Portfolio ------------------------------------------------------------------*/
 
 /* -------------------------------------------------------Contact Design -----------------------------------------------------------*/
@@ -770,43 +859,9 @@ transition: .5s ease;
      /* home content */
 
     /* about content */
-    .about-container {
-        flex-direction: column;
-        align-items: stretch;
-      }
+   
     
-      .about-card {
-        width: 100%;
-        margin-bottom: 30px; /* Adjust spacing between cards */
-      }
-    
-      .item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: auto;
-      }
-    
-      .item-4,
-      .item-5,
-      .item-6,
-      .item-7,
-      .item-8 {
-        margin-bottom: 15px; /* Adjust spacing between items */
-      }
-    
-      .about-card:nth-child(1) {
-        margin-bottom: 30px; /* Adjust margin for the first card */
-      }
-    
-      .about-card:nth-child(2) h3 {
-        margin-bottom: 20px; /* Adjust margin for the second card heading */
-      }
-    
-      .about-card {
-        padding: 30px; /* Adjust padding for smaller screens */
-      }
-
+      
      /* about content */
 
 
