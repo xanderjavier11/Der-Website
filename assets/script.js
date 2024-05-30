@@ -83,13 +83,14 @@ ScrollReveal().reveal (' .company-content, .position-logo', {origin: 'right'});
 
 ScrollReveal().reveal (' .portfolio-header, .portfolio-content', {distance: '0px', });
 ScrollReveal().reveal ('.btn-card', {distance:'100px', origin: 'bottom', interval: 200})
-ScrollReveal().reveal ('.accomplishment-card h2, .ojt-card h2', {distance:'100px', origin: 'top'  })
+ScrollReveal().reveal ('.accomplishment-card h2, .ojt-container h2', {distance:'100px', origin: 'top'  })
 };
 
 
 // ======================================= typing ==========================================
+
 var typed = new Typed(".auto-type", {
-    strings: ["Information Technology Student", ],
+    strings: ["Information Technology Student","Front End Developer","IT Support","Network Engineer" ],
     startDelay: 1000,
     typeSpeed: 100,
     backSpeed: 100,
