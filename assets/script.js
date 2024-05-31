@@ -50,16 +50,28 @@ var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
 function opentab(event, tabname) {
+    // Remove active-link class from all tab links
     for (let tablink of tablinks) {
         tablink.classList.remove("active-link");
     }
 
+    // Remove active-tab and fade-in classes from all tab contents
     for (let tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
+        tabcontent.classList.remove("active-tab", "fade-in");
     }
 
+    // Add active-link class to the clicked tab link
     event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
+
+    // Add active-tab class to the corresponding tab content
+    const activeTab = document.getElementById(tabname);
+    activeTab.classList.add("active-tab");
+    
+    // Trigger reflow to restart the animation
+    void activeTab.offsetWidth;
+
+    // Add fade-in class to trigger the animation
+    activeTab.classList.add("fade-in");
 }
 // =======================================about me ======================================== //
 
@@ -72,17 +84,26 @@ ScrollReveal ({
     reset: true,
 });
 
+ScrollReveal().reveal('.active-tab', {
+    duration: 1000, // Animation duration in milliseconds
+    origin: 'bottom', // Animation starting point
+    distance: '50px', // Distance the element moves during the animation
+    reset: true // If true, the animation resets every time the element becomes visible
+});
+
 ScrollReveal().reveal (' .home-header', {origin: 'top', });
 ScrollReveal().reveal ('.home .home-img , .heading ', {origin: 'right'});
 
 ScrollReveal().reveal ('.skills-container .skills-box', {origin: 'bottom', interval: 200, distance:'200px' });
 ScrollReveal().reveal ('.home .home-text, .download-cv, .social-media', {origin: 'left'});
 
-ScrollReveal().reveal (' .company-logo, .position-content', {origin: 'left'});
+ScrollReveal().reveal (' .company-logo, .position-content, .contact-btn' , {origin: 'left'});
 ScrollReveal().reveal (' .company-content, .position-logo', {origin: 'right'});
 
 ScrollReveal().reveal (' .portfolio-header, .portfolio-content', {distance: '0px', });
 ScrollReveal().reveal ('.btn-card', {distance:'100px', origin: 'bottom', interval: 200})
+ScrollReveal().reveal ('.ojt-cardd', {distance:'100px', origin: 'bottom', interval: 200})
+
 ScrollReveal().reveal ('.accomplishment-card h2, .ojt-container h2', {distance:'100px', origin: 'top'  })
 };
 
@@ -95,5 +116,26 @@ var typed = new Typed(".auto-type", {
     typeSpeed: 100,
     backSpeed: 100,
     loop: true
-  })
+  });
+
+
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const responseElement = document.getElementById('formResponse');
+    
+    // Simulate form submission
+    setTimeout(() => {
+        responseElement.textContent = `Thank you for contacting me, ${name}! I'll get back to you at ${email} soon.`;
+        
+        // Clear the form
+        document.getElementById('contactForm').reset();
+    }, 1000);
+});
+
+
+
  
