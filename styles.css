@@ -952,9 +952,11 @@ transition: .5s ease;
       align-items: center;
   }
 
+ 
+
   .about-img img {
       width: 100%;
-      height: auto;
+     
       margin-left: 0;
       border-radius: 0%;
   }
