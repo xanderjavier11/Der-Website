@@ -118,23 +118,29 @@ var typed = new Typed(".auto-type", {
     loop: true
   });
 
+  function submitForm() {
+    var form = document.getElementById('contact-form');
+    var formData = new FormData(form);
 
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    const responseElement = document.getElementById('formResponse');
-    
-    // Simulate form submission
-    setTimeout(() => {
-        responseElement.textContent = `Thank you for contacting me, ${name}! I'll get back to you at ${email} soon.`;
-        
-        // Clear the form
-        document.getElementById('contactForm').reset();
-    }, 1000);
-});
+    fetch(form.action, {
+        method: form.method,
+        body: formData
+    })
+    .then(function(response) {
+        if (response.ok) {
+            alert('Message sent successfully.');
+            // Reset the form after a brief delay (e.g., 1 second)
+            setTimeout(function() {
+                form.reset();
+            }, 1000);
+        } else {
+            alert('Failed to send message. Please try again later.');
+        }
+    })
+    .catch(function(error) {
+        alert('An error occurred. Please try again later.');
+    });
+}
 
 
 
